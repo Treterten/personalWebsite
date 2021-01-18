@@ -1,12 +1,25 @@
 @keyframes appear {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.scale-down-center {
+	animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .mainView {
@@ -48,7 +61,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-.aboutMe {
+.modal {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
   position: fixed;
@@ -61,15 +74,30 @@ button:hover {
   color: #f3f3f3;
 }
 
-.modalInformation {
+.aboutMe {
   margin: 10% auto;
   background-color: #141414;
   border: 1px solid #f3f3f3;
   border-radius: 10px;
   display: grid;
-  height: 400px;
+  height: fit-content;
   -webkit-animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+  animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto 50px;
+}
+
+.aboutMeBye {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: grid;
+  height: fit-content;
+  animation: scale-down-center 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto 50px;
+}
 
 button {
   background-color: rgba(0, 0, 0, 0);
@@ -86,3 +114,28 @@ button:focus {
   box-shadow: none;
 }
 
+.aboutMe button {
+  margin: 0 1% 0 auto;
+  width: fit-content;
+  grid-row: 3 / 3;
+  grid-column: 2 / 3;
+}
+
+.aboutMe h1 {
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.aboutMe p {
+  grid-column-start: 1;
+  margin-left: 1%;
+  font-size: 20px;
+}
+
+.aboutMe img {
+  width: 300px;
+  margin: 1% auto;
+  padding: 0;
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+}
