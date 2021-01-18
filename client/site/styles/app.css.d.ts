@@ -1,6 +1,11 @@
 declare namespace AppCssNamespace {
   export interface IAppCss {
-    element: string;
+    aboutMe: string;
+    appear: string;
+    mainView: string;
+    modalInformation: string;
+    quickLinks: string;
+    welcomeMessage: string;
   }
 }
 

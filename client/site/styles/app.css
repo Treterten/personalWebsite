@@ -1,4 +1,88 @@
-.element {
-  font-size: 50px;
-  background-color: blue;
+@keyframes appear {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
+
+.mainView {
+  background-color: #141414;
+  color: #f3f3f3;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Pixel', sans-serif;
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: 17% 1000px auto;
+}
+
+.welcomeMessage {
+  grid-column-start: 2;
+  margin: 5% auto 0 auto;
+  font-size: 50px
+}
+
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 50px;
+  height: fit-content;
+  grid-column-start: 2;
+  border: 2px solid #f3f3f3;
+  margin: 30px auto;
+}
+
+button:hover {
+  color: #15ffb9;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.aboutMe {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  font-family: 'Pixel', sans-serif;
+  color: #f3f3f3;
+}
+
+.modalInformation {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: grid;
+  height: 400px;
+  -webkit-animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Pixel', sans-serif;
+  border: none;
+  color: #f3f3f3;
+  font-size: 25px;
+  padding: 5px 0;
+  appearance:initial;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
