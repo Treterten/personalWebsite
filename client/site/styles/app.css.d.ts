@@ -5,6 +5,8 @@ declare namespace AppCssNamespace {
     appear: string;
     backButton: string;
     mainView: string;
+    media: string;
+    mediaBye: string;
     modal: string;
     projects: string;
     projectsBye: string;

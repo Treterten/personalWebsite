@@ -117,6 +117,23 @@ button:hover {
   -webkit-animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+.media {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  height: fit-content;
+  flex-direction: column;
+  -webkit-animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  width: 500px;
+}
+
 .projectsBye {
   margin: 10% auto;
   background-color: #141414;
@@ -139,6 +156,19 @@ button:hover {
   animation: scale-down-center 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px auto 50px;
+}
+
+.mediaBye {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  height: fit-content;
+  flex-direction: column;
+  animation: scale-down-center 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 button {

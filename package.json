@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node ./server/server.ts",
-    "build": "webpack -w"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "source-map-loader": "^2.0.0",
     "webpack": "^5.15.0"

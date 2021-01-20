@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styles from '../styles/app.css';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
@@ -9,7 +9,6 @@ import Modal from './Modal';
 const Home = () => {
   const [showAboutMe, toggleAbout] = useState(false);
   const [showProjects, toggleProjects] = useState(false);
-  const [showBlog, toggleBlog] = useState(false);
   const [showMedia, toggleMedia] = useState(false);
 
   return (
@@ -19,7 +18,7 @@ const Home = () => {
         <div className={styles.quickLinks}>
           <button type="button" onClick={() => toggleAbout(true)}>About Me</button>
           <button type="button" onClick={() => toggleProjects(true)}>Projects</button>
-          <Link to="/Blog">Blog</Link>
+          {/* <Link to="/Blog">Blog</Link> */}
           <button type="button" onClick={() => toggleMedia(true)}>Media</button>
           {
             showAboutMe ? (

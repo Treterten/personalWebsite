@@ -29,8 +29,8 @@ const Projects: React.FC<ProjectProps> = (props) => {
     axios.get('https://api.github.com/users/Treterten/repos')
       .then((results) => {
         setRepos(results.data);
-        console.log(results.data);
       })
+      // eslint-disable-next-line no-console
       .catch((err) => console.error(err));
   }, []);
 
