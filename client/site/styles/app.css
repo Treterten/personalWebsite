@@ -18,6 +18,24 @@
   }
 }
 
+a {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Pixel', sans-serif;
+  border: none;
+  color: #f3f3f3;
+  font-size: 25px;
+  padding: 5px 0;
+  appearance:initial;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #15ffb9;
+  cursor: pointer;
+  transform-origin: center center;
+  transform: scale(1.1);
+}
+
 .scale-down-center {
 	animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -87,6 +105,30 @@ button:hover {
   grid-template-rows: 50px auto 50px;
 }
 
+.projects {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  height: fit-content;
+  -webkit-animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: appear 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.projectsBye {
+  margin: 10% auto;
+  background-color: #141414;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  height: fit-content;
+  animation: scale-down-center 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 .aboutMeBye {
   margin: 10% auto;
   background-color: #141414;
@@ -138,4 +180,10 @@ button:focus {
   padding: 0;
   grid-row: 1 / 4;
   grid-column: 2 / 3;
+}
+
+#backButton {
+  position: absolute;
+  left: 2%;
+  top: 2%;
 }

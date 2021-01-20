@@ -1,32 +1,13 @@
-import React, { useState } from 'react';
-import styles from '../styles/app.css';
-import AboutMe from './AboutMe';
-import Modal from './Modal';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Blog from './Blog';
 
-const App = () => {
-  const [showModal, toggleModal] = useState(false);
-
-  return (
-    <>
-      <div className={styles.mainView}>
-        <h1 className={styles.welcomeMessage}>Hi, welcome to my site! 👾</h1>
-        <div className={styles.quickLinks}>
-          <button type="button" onClick={() => toggleModal(true)}>About Me</button>
-          <button type="button">Projects</button>
-          <button type="button">Blog</button>
-          <button type="button">Media</button>
-          {
-            showModal ? (
-              <Modal>
-                <AboutMe modalState={showModal} toggleModal={toggleModal} />
-              </Modal>
-            ) : null
-          }
-        </div>
-      </div>
-      <div id="modal" />
-    </>
-  );
-};
+const App = () => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/Blog" component={Blog} />
+  </Switch>
+);
 
 export default App;

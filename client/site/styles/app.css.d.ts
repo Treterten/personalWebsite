@@ -3,8 +3,11 @@ declare namespace AppCssNamespace {
     aboutMe: string;
     aboutMeBye: string;
     appear: string;
+    backButton: string;
     mainView: string;
     modal: string;
+    projects: string;
+    projectsBye: string;
     quickLinks: string;
     "scale-down-center": string;
     welcomeMessage: string;
